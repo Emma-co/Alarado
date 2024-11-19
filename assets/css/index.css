@@ -1,0 +1,493 @@
+body {
+  background-color: #f2f9fe;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease-in-out;
+  background-image: url(..assets/images/blur-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.dark {
+  background-color: #111729;
+}
+
+body.dark #about {
+  color: white;
+}
+
+body.dark header ul li:hover {
+  color: #c9cfd6;
+}
+
+body.dark #hamburger .bar{
+  background-color: white;
+}
+
+#logo {
+  transition: 0.5s ease-in-out;
+}
+
+#logo.hidden {
+  opacity: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: min(90%, 1440px);
+  margin-inline: auto;
+}
+
+header ul {
+  display: flex;
+  flex-direction: row;
+}
+
+
+#about {
+  color: #111729;
+}
+
+#hamburger{
+  display: none;
+}
+
+#hamburger .bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #111729;
+  margin: 5px auto ;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+nav ul li {
+  list-style: none;
+  color: #909193;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  margin-right: 30px;
+}
+
+body.dark nav ul li:hover{
+  border-bottom: 2px solid white;
+}
+
+header ul li:hover {
+  color: #223344;
+  border-bottom: 2px solid #223344;
+}
+
+.checkbox {
+  opacity: 0;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(-21px);
+}
+
+.checkbox:checked + .label {
+  background-color: #223344;
+}
+
+#label.dark {
+  background-color: #223344;
+}
+
+#bg-color {
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+
+.label {
+  background-color: #111729;
+  border-radius: 20px;
+  padding: 2.5px 2.5px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.ball {
+  border-radius: 20px;
+  margin: -25px 0px 0px 22px;
+  background-color: rgb(255, 179, 0);
+  width: 23px;
+  height: 23px;
+  transition: 0.3s ease-in-out;
+}
+
+body.dark .ball{
+  background-color: rgba(190, 255, 255, 0.598);
+}
+
+#moon {
+  width: 20px;
+  position: relative;
+  top: 3px;
+  left: 2px;
+  z-index: 1;
+}
+
+#sun {
+  width: 20px;
+  position: relative;
+  top: 3px;
+  z-index: 1;
+}
+
+main{
+  margin-top: 90px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  column-gap: 7vw;
+}
+
+#intro-text{
+  display: flex;
+}
+
+#intro-text img{
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 12px;
+}
+
+#intro-text p{
+  font-size: 15px;
+  font-weight: 600;
+  color: #223344;
+}
+
+#section-img img{
+  width: 50vw;
+}
+
+#section-text{
+  margin-left: 5vw;
+}
+
+body.dark #intro-text p{
+  color: white;
+}
+
+#section-text h1{
+  font-size: 4vw;
+  color: #223344;
+}
+
+#section-text #text{
+  color: #223344;
+  font-weight: 500;
+}
+
+body.dark #section-text #text{
+  color: white;
+}
+
+body.dark #section-text h1{
+  color: white;
+}
+
+#section-text p img{
+  position: relative;
+  top: 6px;
+}
+
+#buttons{
+  display: flex;
+  gap: 50px;
+}
+
+#buttons p{
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+#buttons p:hover{
+  border-bottom: 2px solid #2A4DD0;
+}
+
+#buttons button{
+  background-color: #2A4DD0;
+  color: white;
+  border-style: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-size: medium;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.7s ease-in;
+}
+
+@keyframes button{
+  0%{
+    color: rgb(121, 0, 0);
+  }
+  15%{
+    color: rgb(255, 111, 0);
+  }
+  30%{
+    color: rgb(186, 186, 5);
+  }
+  45%{
+    color: rgb(2, 84, 2);
+  }
+  75%{
+    color: blue;
+  }
+  85%{
+    color: indigo;
+  }
+  100%{
+    color: rgb(111, 1, 111);
+  }
+}
+
+#buttons button:hover{
+  box-shadow: 5px 5px 5px 0px rgba(63, 4, 85, 0.443);
+  animation: button 2s ease-in-out infinite alternate;
+  transition: 0.7s ease-in;
+}
+
+body.dark #buttons button:hover{
+  box-shadow: 5px 5px 5px 0px rgba(96, 53, 53, 0.781);
+}
+
+#buttons p{
+  color: #2A4DD0;
+  
+}
+
+#check{
+  display: flex;
+  font-weight: 420;
+  color: #909193;
+  gap: 35px;
+}
+
+
+@media (max-width: 640px) {
+  *{
+    margin: 0;
+  }
+
+  body{
+    margin: 0px;
+    overflow-x: hidden;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0px;
+    width: min(100%, 1440px);
+
+  }
+
+  #logo{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    position: relative;
+    top: 12px;
+    left: 10px;
+  }
+
+  nav{
+    background-color: white;
+    padding: 40px 25px 150% 25px;
+    position: fixed;
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  nav.active{
+    right: 0px;
+  }
+
+  #hamburger{
+    display: block;
+    position: fixed;
+    right: 5vw;
+    top: 3vw;
+    z-index: 10;
+  }
+
+  #hamburger.active .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  #hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  #hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  body.dark nav{
+    background-color: #111729;
+  }
+
+  nav ul {
+    display: block;
+    margin-top: 8vw;
+  }
+
+  nav ul li{
+    margin-right: 0px;
+    margin-left: -40px;
+    padding: 10px;
+    font-size: 7vw;
+    text-align: center;
+  }
+
+  #bg-color{
+    position: fixed;
+    right: -100%;
+    top: 300px;
+    width: fit-content;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #bg-color.active{
+    right: 19vw;
+  }
+
+  main{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 70px;
+  }
+
+  #section-text{
+    margin-left: 15px;
+  }
+
+  #section-text h1{
+    font-size: 6vw;
+    color: #223344;
+  }
+    
+  #intro-text img{
+    position: relative;
+    top: 0px;
+    }
+
+  #intro-text p{
+    font-size: 3.5vw;
+   font-weight: 600;
+   color: #223344;
+  }
+
+  #section-text{
+    margin-top: 20px;
+  }
+
+  #section-img img{
+    width: min(90%, 1440px);
+  }
+
+  #check p img{
+    width: min(10%, 640px);
+  }
+
+  #check p{
+    font-size: 12px;
+  }
+
+  #text{
+    width: 90vw;
+  }
+
+  #buttons p{
+    margin-top: 10px;
+  }
+
+  #section-text h1{
+    margin-top: 10px;
+  }
+
+  #text{
+    margin-top: 20px;
+  }
+
+  #buttons{
+    margin-top: 20px;
+  }
+
+  #check{
+    margin-top: 20px;
+    gap: 10px;
+    
+  }
+  
+
+  @media screen and (max-width: 360px){
+    #check{
+      display: block;
+    }
+
+    #check p{
+      font-size: 16px;
+      margin-left: 30px;
+    }
+
+    #buttons button{
+      font-size: 12px;
+    }
+
+    #buttons{
+      gap: 20px;
+    }
+
+  
+  
+  }
+
+  @media screen and (min-width: 375px) and (max-width: 640px) {
+    #bg-color{
+      top: 350px;
+    }
+
+    #bg-color.active{
+      right: 15vw;
+    }
+
+    nav ul li{
+      font-size: 6vw;
+    }
+
+    #hamburger{
+      top: 2vw;
+    }
+
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 641px){
+
+  #buttons button{
+    font-size: 10px;
+    padding: 10px 20px 10px 20px;
+  }
+
+
+  #check p{
+    font-size: 10px;
+  }
+
+  
+  #check p img{
+    width: min(12%, 1024px);
+  }
+
+  #check{
+    gap: 0px;
+    
+  }
+}
